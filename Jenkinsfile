@@ -4,6 +4,8 @@ pipeline {
         stage('Build'){
             steps {
                 sh 'echo "Compiling..."'
+		sh 'echo "Building for Embedded Target 1"'
+		sh 'echo "Building for Embedded Target 2"'
             }
         }
         stage('Test'){
