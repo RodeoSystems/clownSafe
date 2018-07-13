@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Test'){
             steps {
-                awsCodeBuild projectName: 'project', credentialsType: 'keys', region: 'us-west-2', sourceControlType: 'jenkins'
+                awsCodeBuild projectName: 'oscheck', credentialsType: 'keys', region: 'us-west-2', sourceControlType: 'jenkins'
                 sh 'echo "Unit testing compiled libraries..."'
             }
         }
