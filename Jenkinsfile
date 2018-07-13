@@ -10,12 +10,8 @@ pipeline {
         }
         stage('Test'){
             steps {
+                awsCodeBuild projectName: 'jenkins_generic', credentialsType: 'keys', region: 'us-east-2', sourceControlType: 'jenkins'
                 sh 'echo "Unit testing compiled libraries..."'
-            }
-        }
-        stage('Preflight'){
-            steps {
-                sh 'echo "Running external test battery from QA"'
             }
         }
         stage('Deployment'){
