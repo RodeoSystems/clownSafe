@@ -1,6 +1,5 @@
-awsCodeBuild projectName: 'project', credentialsType: 'keys', region: 'us-west-2', sourceControlType: 'jenkins'
-            
 pipeline { 
+    awsCodeBuild projectName: 'project', credentialsType: 'keys', region: 'us-west-2', sourceControlType: 'jenkins'
     agent any 
     stages {
         stage('Build'){
